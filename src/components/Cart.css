@@ -1,0 +1,56 @@
+.cartSection {
+  flex: 2;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  margin-left: 40px;
+  padding: 10px 20px;
+  align-self: flex-start;
+  overflow-y: auto;
+  text-align: center;
+}
+.cartItem {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+.cartItemInfo{
+    display: flex;
+    justify-content:space-evenly;
+    text-align: center;
+}
+.deleteButton {
+    background-color: white;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 15px 0;
+}
+
+.deleteButton:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+.orderTotalSection{
+    display: flex;
+    flex-direction: column;
+}
+.carbonQuote{
+    background-color: hsl(20, 50%, 98%);
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+.orderButton{
+    border-radius: 20px;
+    border: none;
+    padding: 12px 0;
+    margin-bottom: 10px;
+    background-color: hsl(14, 86%, 42%);
+}
+
+

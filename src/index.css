@@ -1,11 +1,19 @@
+@font-face {
+  font-family: "Red Hat Text"; ;
+  src: url('./assets/fonts/RedHatText-VariableFont_wght.ttf') format('truetype'),
+       url('./assets/fonts/RedHatText-Italic-VariableFont_wght.ttf') format('truetype');
+ 
+}
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: 'Red Hat Text',system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
+  margin: 0 auto;
+  padding: 4rem;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  /* background-color: hsl(20, 50%, 98%); */
+  background-color: hsl(20, 50%, 98%);
+  color: black;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

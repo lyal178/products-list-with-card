@@ -1,6 +1,6 @@
 import { useState } from "react";
-import ProductsList from "./components/ProductsList.jsx";
-import Cart from "./components/Cart.jsx";
+import ProductsList from "./components/Products/ProductsList.jsx";
+import Cart from "./components/Cart/Cart.jsx";
 import productSource from "../productSource.js";
 import "./App.css"
 

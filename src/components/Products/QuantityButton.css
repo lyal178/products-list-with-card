@@ -1,0 +1,38 @@
+.quantityButton {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: absolute;
+  bottom: -15px;
+  color: white;
+  border-radius: 25px;
+  border: 1px solid hsl(14, 86%, 42%);
+  background-color: hsl(14, 86%, 42%);
+  padding: 10px 30px;
+}
+.quantityChangeButtons {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.addtoCartButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  bottom: -15px;
+  color: black;
+  border-radius: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  background-color: white;
+  padding: 10px 30px;
+}
+.addtoCartButton:hover {
+  transform: scale(1.1);
+}

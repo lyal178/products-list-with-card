@@ -1,14 +1,33 @@
 import React from "react";
 import "./ProductsList.css";
 import cartIcon from "../assets/images/icon-add-to-cart.svg";
-const ProductList = ({ productArray }) => {
+import decrementIcon from "../assets/images/icon-decrement-quantity.svg"
+import incrementIcon from "../assets/images/icon-increment-quantity.svg"
+
+const ProductList = ({ productArray, setCartList, cartList }) => {
+  const getProductQuantity = (productId) => {
+    const product = cartList.find((cartItem) => cartItem.id === productId);
+    return product ? product.quantity : 0;
+  };
+
+  const handleAddButton = (product) => {
+    const existingItem = cartList.find(
+      (cartItem) => cartItem.id === product.id
+    );
+    if (!existingItem) {
+      setCartList((prevCartList) => [
+        ...prevCartList,
+        { ...product, quantity: 1 },
+      ]);
+    }
+  };
   return (
     <>
       <div className="productsSection">
         <h1>Desserts</h1>
         <div className="productsGrid">
           {productArray.map((product) => (
-            <div className="productSection">
+            <div className="productSection" key={product.id}>
               <div className="productImgSection">
                 <picture className="productImage">
                   <source
@@ -29,10 +48,22 @@ const ProductList = ({ productArray }) => {
                     className="productImage"
                   />
                 </picture>
-
-                <button className="countButton">
-                  <img src={cartIcon} /> Add to Cart
-                </button>
+                {getProductQuantity(product.id) > 0 ? (
+                  <div className="quantityButton">
+                    <button className="quantityChangeButtons"><img style={{height:"10px", width: "10px"}} src={decrementIcon}/></button>
+                    <span>{getProductQuantity(product.id)}</span>
+                    <button className="quantityChangeButtons"><img style={{height:"10px", width: "10px"}} src={incrementIcon}/></button>
+                  </div>
+                ) : (
+                  <button
+                    onClick={() => {
+                      handleAddButton(product);
+                    }}
+                    className="addtoCartButton"
+                  >
+                    <img src={cartIcon} /> Add to Cart
+                  </button>
+                )}
               </div>
               <div className="productInfoSection">
                 <p className="productType">{product.type}</p>

@@ -21,7 +21,7 @@
   height: auto;
   border-radius: 20px;
 }
-.countButton {
+.addtoCartButton {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -34,13 +34,35 @@
   background-color: white;
   padding: 10px 30px;
 }
-.countButton:hover {
+.addtoCartButton:hover {
   transform: scale(1.1);
+}
+.quantityButton{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  bottom: -15px;
+  color: white;
+  border-radius: 25px;
+  border: 1px solid hsl(14, 86%, 42%);
+  background-color: hsl(14, 86%, 42%);
+  padding: 10px 30px;
+}
+.quantityChangeButtons{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.0);
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
 }
 
 .productInfoSection {
   text-align: left;
-  line-height: 0.5;
+  line-height: 1;
   padding: 10px 0px;
   margin-top: 10px;
 }

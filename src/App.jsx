@@ -6,28 +6,13 @@ import "./App.css"
 
 function App() {
   const [productArray, setProductArray] = useState(productSource);
-  const [cartList, setCartList] = useState([ {
-    name: "Waffle with Berries",
-    type: "Waffle",
-    price: 6.50,
-    quantity: 5
-  },{
-    name: "Waffle with Berries",
-    type: "Waffle",
-    price: 6.50,
-    quantity: 5
-  },{
-    name: "Waffle with Berries",
-    type: "Waffle",
-    price: 6.50,
-    quantity: 5
-  }]);
+  const [cartList, setCartList] = useState([]);
 
   return (
     <>
       <div className="pageLayout">
-        <ProductsList productArray={productArray} />
-        <Cart cartList={cartList} />
+        <ProductsList productArray={productArray} cartList={cartList} setCartList={setCartList}  />
+        <Cart cartList={cartList} setCartList={setCartList} />
       </div>
     </>
   );

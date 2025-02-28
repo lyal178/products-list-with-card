@@ -8,6 +8,10 @@
   align-self: flex-start;
   overflow-y: auto;
   text-align: center;
+  min-width: 350px;
+}
+.cartItem p {
+  margin: 10px;
 }
 .cartItem {
   display: flex;
@@ -16,41 +20,49 @@
   padding: 10px;
   border-bottom: 1px solid hsl(0, 0%, 90%);
 }
-.cartItemInfo{
-    display: flex;
-    justify-content:space-evenly;
-    text-align: center;
+.cartItemInfo {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  line-height: 0.5;
+}
+.cartItemPrice {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 .deleteButton {
-    background-color: white;
-    border: 0.5px solid rgba(0, 0, 0, 0.2);
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    margin: 15px 0;
+  background-color: white;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 15px 0;
 }
 
 .deleteButton:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
 }
-.orderTotalSection{
-    display: flex;
-    flex-direction: column;
+.orderTotalSection {
+  display: flex;
+  flex-direction: column;
 }
-.carbonQuote{
-    background-color: hsl(20, 50%, 98%);
-    border-radius: 10px;
-    padding: 10px 15px;
+.carbonQuote {
+  background-color: hsl(20, 50%, 98%);
+  border-radius: 10px;
+  padding: 10px 15px;
 }
-.orderButton{
-    border-radius: 20px;
-    border: none;
-    padding: 12px 0;
-    margin-bottom: 10px;
-    background-color: hsl(14, 86%, 42%);
+.orderButton {
+  border-radius: 20px;
+  border: none;
+  padding: 12px 0;
+  margin-bottom: 10px;
+  background-color: hsl(14, 86%, 42%);
 }
-
-
+.orderButton:hover {
+  background-color: hsl(14, 86%, 38%);
+  transform: scale(1.01);
+}

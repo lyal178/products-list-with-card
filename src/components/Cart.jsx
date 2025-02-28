@@ -2,7 +2,13 @@ import emptyCartIcon from "../assets/images/illustration-empty-cart.svg";
 import deleteButtonIcon from "../assets/images/icon-remove-item.svg";
 import carbonIcon from "../assets/images/icon-carbon-neutral.svg";
 import "./Cart.css";
-const Cart = ({ cartList }) => {
+const Cart = ({ cartList,setCartList }) => {
+  
+  const handleDeleteButton = (cartItem) => {
+    const updatedCartList = cartList.filter(item => item.id !== cartItem.id);
+    setCartList(updatedCartList);
+  }
+  
   return (
     <>
       <div className="cartSection">
@@ -14,16 +20,20 @@ const Cart = ({ cartList }) => {
         ) : (
           cartList.map((cartItem) => (
             <div className="cartItem">
-              <h3>{cartItem.name}</h3>
+              <p>
+                <b>{cartItem.name}</b>
+              </p>
               <div className="cartItemInfo">
-                <p style={{ color: "hsl(14, 86%, 42%)" }}>
-                  {cartItem.quantity}x
-                </p>
-                <p style={{ color: "rgba(0, 0, 0, 0.50)" }}>
-                  @${cartItem.price}
-                </p>
-                <p>${cartItem.price * cartItem.quantity}</p>
-                <button className="deleteButton">
+                <div className="cartItemPrice">
+                  <p style={{ color: "hsl(14, 86%, 42%)" }}>
+                    {cartItem.quantity}x
+                  </p>
+                  <p style={{ color: "rgba(0, 0, 0, 0.50)" }}>
+                    @${cartItem.price}
+                  </p>
+                  <p>${cartItem.price * cartItem.quantity}</p>
+                </div>
+                <button onClick={()=>{handleDeleteButton(cartItem)}} className="deleteButton">
                   <img src={deleteButtonIcon} />
                 </button>
               </div>
@@ -34,15 +44,20 @@ const Cart = ({ cartList }) => {
           <p className="emptyCartParagraph">Your added item will appear here</p>
         ) : (
           <section className="orderTotalSection">
-            <div style={{ display: "flex", justifyContent: "space-between", padding:"0 10px" }}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                padding: "0 10px",
+              }}
+            >
               <p>Order Total</p>
               <p>
                 <b>$42.21</b>
               </p>
             </div>
             <p className="carbonQuote">
-              <img src={carbonIcon} /> This is a <b>carbon-neutral</b>{" "}
-              delivery
+              <img src={carbonIcon} /> This is a <b>carbon-neutral</b> delivery
             </p>
             <button className="orderButton">Confirm Order</button>
           </section>

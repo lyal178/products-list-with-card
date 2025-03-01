@@ -1,6 +1,6 @@
-import decrementIcon from "../../assets/images/icon-decrement-quantity.svg";
-import incrementIcon from "../../assets/images/icon-increment-quantity.svg";
-import cartIcon from "../../assets/images/icon-add-to-cart.svg";
+import decrementIcon from "/assets/images/icon-decrement-quantity.svg";
+import incrementIcon from "/assets/images/icon-increment-quantity.svg";
+import cartIcon from "/assets/images/icon-add-to-cart.svg";
 import "./QuantityButton.css"
 
 const QuantityButton = ({ product, cartList, setCartList }) => {

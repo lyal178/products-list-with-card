@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import emptyCartIcon from "../../assets/images/illustration-empty-cart.svg";
-import deleteButtonIcon from "../../assets/images/icon-remove-item.svg";
-import carbonIcon from "../../assets/images/icon-carbon-neutral.svg";
+import emptyCartIcon from "/assets/images/illustration-empty-cart.svg";
+import deleteButtonIcon from "/assets/images/icon-remove-item.svg";
+import carbonIcon from "/assets/images/icon-carbon-neutral.svg";
 import OrderConfirmation from "./OrderConfirmation.jsx";
 import "./Cart.css";
 

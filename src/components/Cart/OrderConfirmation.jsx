@@ -1,5 +1,5 @@
 import "./OrderConfirmation.css";
-import confirmIcon from "../../assets/images/icon-order-confirmed.svg";
+import confirmIcon from "/assets/images/icon-order-confirmed.svg";
 
 const OrderConfirmation = ({ cartList, onClose, setCartList }) => {
   const totalPrice = cartList.reduce(

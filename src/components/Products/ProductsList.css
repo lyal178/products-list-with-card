@@ -38,3 +38,14 @@
   color: hsl(14, 86%, 42%);
   font-weight: 600;
 }
+
+@media (max-width: 480px) {
+  .productsGrid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .productImgSection {
+    width: 100%;
+  }
+}

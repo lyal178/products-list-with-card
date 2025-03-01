@@ -19,25 +19,11 @@ const ProductList = ({ productArray, setCartList, cartList }) => {
                   isProductInCart(product.id) ? "inCart" : ""
                 }`}
               >
-                <picture className="productImage">
-                  <source
-                    srcSet={product.imgMobile}
-                    media="(max-width: 480px)"
-                  />
-                  <source
-                    srcSet={product.imgTablet}
-                    media="(min-width: 481px) and (max-width: 1023px)"
-                  />
-                  <source
-                    srcSet={product.imgDesktop}
-                    media="(min-width: 1024px)"
-                  />
-                  <img
-                    src={product.imgMobile}
-                    alt={product.name}
-                    className="productImage"
-                  />
-                </picture>
+                <img
+                  src={product.imgMobile}
+                  alt={product.name}
+                  className="productImage"
+                />
                 <QuantityButton
                   product={product}
                   setCartList={setCartList}
@@ -58,8 +44,3 @@ const ProductList = ({ productArray, setCartList, cartList }) => {
 };
 
 export default ProductList;
-// mobile max 480px
-// tablet min 481px  max 1024px
-// desktop min 1024
-
-// make responsive img src work

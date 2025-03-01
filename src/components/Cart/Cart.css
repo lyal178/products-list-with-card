@@ -66,3 +66,41 @@
   background-color: hsl(14, 86%, 38%);
   transform: scale(1.01);
 }
+
+@media (max-width: 480px) {
+  .cartSection {
+    margin-left: 0;
+    min-width: 100%;
+    padding: 10px;
+  }
+
+  .cartItem p {
+    margin: 5px;
+  }
+
+  .cartItemInfo {
+    flex-direction: row;
+    align-items: flex-start;
+    
+  }
+
+  .cartItemPrice {
+    margin: 10px 0;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .deleteButton {
+    margin: 10px 0;
+  }
+  .orderButton{
+    font-size: 1rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 1024px) {
+  .cartSection {
+    min-width: 30%;
+    
+  }
+}

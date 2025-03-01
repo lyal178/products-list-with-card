@@ -4,3 +4,10 @@
     height: 100%;
     gap: 20;
 }
+
+@media (max-width: 480px) {
+    .pageLayout {
+      flex-direction: column;
+      gap: 10px; 
+    }
+  }

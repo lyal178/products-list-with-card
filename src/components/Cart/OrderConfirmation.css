@@ -64,6 +64,41 @@
   border-radius: 25px;
   padding: 15px 20px;
   cursor: pointer;
-  margin-top: 20px;
+  margin: 20px 0;
   width: 100%;
+}
+
+@media (max-width: 480px) {
+  .orderConfirmationContent {
+    padding: 20px;
+    max-height: 80vh; 
+    margin-top: 20vh;
+    overflow-y: auto; 
+  }
+
+  .orderConfirmationItem {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+
+  .itemImgAndInfo {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .itemInfo {
+    align-items: flex-start;
+  }
+
+  .buttonSection {
+    padding: 5px;
+    font-size: 1.2rem;
+  }
+
+  .closeButton {
+    padding: 15px;
+    font-size: 1rem;
+  }
 }

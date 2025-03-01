@@ -20,6 +20,10 @@
   width: 20px;
   height: 20px;
 }
+.quantityChangeButtons:hover {
+  background-color: rgba(255, 255, 255, 50%);
+  color: hsl(14, 86%, 42%);
+}
 .addtoCartButton {
   display: flex;
   align-items: center;
@@ -34,5 +38,23 @@
   padding: 10px 30px;
 }
 .addtoCartButton:hover {
+  border-color: hsl(14, 86%, 42%);
+  color: hsl(14, 86%, 42%);
   transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+  .quantityButton, .addtoCartButton {
+    padding: 5px 15px;
+    bottom: -15px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .quantityButton, .addtoCartButton {
+    padding: 1px 5px; 
+    gap: 10px; 
+    bottom: -15px;
+  }
+  
 }
